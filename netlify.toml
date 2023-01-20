@@ -5,4 +5,3 @@
 [functions]
   directory = "src"
   included_files = ["src/api/**/*", "public/**/*"]
-  
