@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import express, { Request, Response } from 'express';
+import serverless from 'serverless-http';
 import bcrypt from 'bcrypt';
 import cors from 'cors';
 
@@ -51,6 +52,8 @@ app.post(`${API_PATH}/users/login`, async (req: Request, res: Response) => {
     res.status(500).send();
   }
 });
+
+export const handler = serverless(app);
 
 // for local testing
 
